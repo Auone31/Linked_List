@@ -1,11 +1,6 @@
 # Linked_List
 
-A simple linked list code which can:
+A simple linked list code which can add, insert, replace and remove items from the list
 
-1) Add Items
+Any feedback would be highly appreciated!!!
 
-2) Insert Items
-
-3) Replace Items
-
-4) Remove Items
