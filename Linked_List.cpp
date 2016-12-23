@@ -38,7 +38,7 @@ bool Linked_List::insert_node(node * NewNode, int position, int mode)
 	if(position <= 0 || position > ListLength+1)
 	{
 		std::cout << "Error: Exceeds length of the list!!!" << std::endl;
-		return(true);
+		return(false);
 	}
 /*****************************************************************************
   * If the new node is inserted at the end of the list
@@ -113,7 +113,7 @@ bool Linked_List::printout(int position)
 	if (position <= 0 || position > ListLength)
 	{
 		std::cout << "Error: Index out of range!!!" << std::endl;
-		return(true);
+		return(false);
 	}
 	node_to_display = root -> next_item;
 	int count = 1;
@@ -149,7 +149,7 @@ bool Linked_List::remove_node(int position)
 	if (position <= 0 || position > ListLength)
 	{
 		std::cout << "Error: Index out of range!!!" << std::endl;
-		return(true);
+		return(false);
 	}
 
 	int count = 1;
@@ -190,4 +190,5 @@ Linked_List::~Linked_List()
 		current = next;
 		next = next -> next_item;
 	}
+	delete current;
 }
