@@ -74,6 +74,10 @@ bool Linked_List::insert_node(node * NewNode, int position, int mode)
 					NewNode -> next_item = desired_location -> next_item;
 					before_desired_location -> next_item = NewNode;
 					delete desired_location;
+					if (position == ListLength)
+					{
+						current_node = NewNode;
+					}
 					break;
 				}
 				else
@@ -158,6 +162,10 @@ bool Linked_List::remove_node(int position)
 		{
 			before_node_to_remove -> next_item = node_to_remove -> next_item;
 			delete node_to_remove;
+			if (position == ListLength)
+			{
+				current_node = before_node_to_remove;
+			}
 			--ListLength;
 			break; 
 		}
@@ -182,5 +190,4 @@ Linked_List::~Linked_List()
 		current = next;
 		next = next -> next_item;
 	}
-	delete next;
 }

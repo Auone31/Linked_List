@@ -23,7 +23,7 @@ class Linked_List
 
 
 	public:
-		node * current_node; //Position of the noe at the end of the list
+		node * current_node; //Position of the node at the end of the list
 
 /*****************************************************************************
   * Constructor

@@ -37,6 +37,16 @@ int main(int argc, char * argv[])
 	Node_F -> name = "Player F";
 	Node_F -> year = "2001";
 
+	node * Node_G = new node;
+	Node_G -> number = 77;
+	Node_G -> name = "Player G";
+	Node_G -> year = "2009";
+
+	node * Node_H = new node;
+	Node_H -> number = 88;
+	Node_H -> name = "Player H";
+	Node_H -> year = "2015 (New Born :-)";
+
 /*****************************************************************************
   * Add 3 players to the list in sequence
   * Print out the contents of the string
@@ -54,7 +64,7 @@ int main(int argc, char * argv[])
   * Insert 2 more Player at specified locations within the list (Mode 0)
   * Print out the updated List
 *****************************************************************************/
-	TeamList.insert_node(Node_D, 1, 0);
+	TeamList.insert_node(Node_D, 2, 0);
 	TeamList.insert_node(Node_E, 4, 0);
 	cout << "-----------------------------------------------------------------" << endl;
     cout << "After Insertion - Mode 0" << endl;
@@ -82,10 +92,26 @@ int main(int argc, char * argv[])
 
 
 /*****************************************************************************
+  * Again insert a player at the end of the list (Mode 0)
+  * Print out the updated List
+*****************************************************************************/
+	TeamList.insert_node(Node_G, 6, 0);
+	cout << "-----------------------------------------------------------------" << endl;
+	cout << "After a new insertion - Mode 0" << endl;
+	cout << "-----------------------------------------------------------------" << endl;
+	TeamList.printout(1);
+	TeamList.printout(2);
+	TeamList.printout(3);
+	TeamList.printout(4);
+	TeamList.printout(5);
+	TeamList.printout(6);
+
+
+/*****************************************************************************
   * Remove one of the players
   * Print out the updated List
 *****************************************************************************/
-	TeamList.remove_node(3);
+	TeamList.remove_node(6);
 	cout << "-----------------------------------------------------------------" << endl;
 	cout << "After Deletion" << endl;
 	cout << "-----------------------------------------------------------------" << endl;
@@ -93,13 +119,13 @@ int main(int argc, char * argv[])
 	TeamList.printout(2);
 	TeamList.printout(3);
 	TeamList.printout(4);
-
+	TeamList.printout(5);
 
 /*****************************************************************************
   * This should print out "Error: Index out of range!!!"
   *
-*****************************************************************************/	
-	TeamList.printout(5);
+*****************************************************************************/
+	TeamList.printout(6);
 
 	return 0;
 }
