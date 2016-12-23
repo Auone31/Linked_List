@@ -177,9 +177,9 @@ Linked_List::~Linked_List()
 	node * current = root;
 	for (int i = 0; i < ListLength; ++i)
 	{
+		delete current;
 		current = next;
 		next = next -> next_item;
-		delete current;
 	}
 	delete next;
 }
