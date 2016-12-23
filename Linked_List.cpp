@@ -47,6 +47,7 @@ bool Linked_List::insert_node(node * NewNode, int position, int mode)
 	{
 		current_node -> next_item = NewNode;
 		current_node = NewNode;
+		current_node -> next_item = nullptr;
 		++ListLength;
 	}
 /*****************************************************************************
